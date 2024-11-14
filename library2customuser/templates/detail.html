@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+<h2 class="text-center">Book Details</h2>
+
+<div class="card mx-auto mb-3 bg-info" style="max-width: 800px;">
+  <div class="row g-0">
+    <div class="col-md-4 me-5">
+      <img src="{{book.cover.url}}" class="rounded-start p-3" height="300px" width="100%"   alt="...">
+    </div>
+    <div class="col-md-7 mt-5">
+      <div class="card-body">
+        <h5 class="card-title m-2">Title:{{book.title}}</h5>
+        <h6 class="card-text m-2">Author:{{book.author}}</h6>
+        <h6 class="card-text m-2">Price:{{book.price}}</h6>
+        <h6 class="card-text m-2">Language:{{book.language}}</h6>
+        <a href="{{book.pdf.url}}" class="btn btn-danger mt-3">Download</a>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+
+{% endblock %}
